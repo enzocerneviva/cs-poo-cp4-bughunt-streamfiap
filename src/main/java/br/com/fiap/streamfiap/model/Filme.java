@@ -5,6 +5,9 @@ import jakarta.persistence.Entity;
 @Entity
 public class Filme extends Conteudo implements Promocionavel {
 
+    private static final double PRECO_BASE = 9.90;
+    private static final double ADICIONAL_ESTREIA = 5.00;
+
     private boolean estreia;
 
     public Filme() {
@@ -17,12 +20,12 @@ public class Filme extends Conteudo implements Promocionavel {
 
     @Override
     public double calcularPrecoAluguel() {
-        return 9.90 + (estreia ? 5.00 : 0.0);
+        return PRECO_BASE + (estreia ? ADICIONAL_ESTREIA : 0.0);
     }
 
     @Override
     public double aplicarPromocao(double preco) {
-        return preco * 0.8;
+        return preco * FATOR_DESCONTO_PROMOCIONAL;
     }
 
     public boolean isEstreia() { return estreia; }

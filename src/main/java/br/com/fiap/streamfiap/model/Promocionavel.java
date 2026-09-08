@@ -7,5 +7,8 @@ package br.com.fiap.streamfiap.model;
  */
 public interface Promocionavel {
 
+    /** Fator aplicado ao preço para dar 20% de desconto. */
+    double FATOR_DESCONTO_PROMOCIONAL = 0.8;
+
     double aplicarPromocao(double preco);
 }
