@@ -4,11 +4,11 @@
 
 **Grupo:** ___
 
-| Integrante              | RM     | Turma |
-|-------------------------|--------|-------|
-| Enzo Cardilli Cerneviva | 563480 | 2CCPX |
-|                         |        | 2CCPX |
-|                         |        | 2CCPX |
+| Integrante                | RM     | Turma |
+|---------------------------|--------|-------|
+| Enzo Cardilli Cerneviva   | 563480 | 2CCPX |
+| Matheus Lara Carneiro     | 564049 | 2CCPX |
+| Victor Hugo Almeida Bahia | 564633 | 2CCPX |
 
 | Campo | |
 |---|---|
