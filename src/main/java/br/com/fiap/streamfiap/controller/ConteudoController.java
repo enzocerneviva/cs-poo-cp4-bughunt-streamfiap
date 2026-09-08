@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -36,13 +35,7 @@ public class ConteudoController {
     // GET /api/conteudos/categoria/{categoria} - Buscar por categoria
     @GetMapping("/categoria/{categoria}")
     public List<Conteudo> listarPorCategoria(@PathVariable String categoria) {
-        List<Conteudo> resultado = new ArrayList<>();
-        for (Conteudo c : conteudoRepository.findAll()) {
-            if (c.getCategoria() == categoria) {
-                resultado.add(c);
-            }
-        }
-        return resultado;
+        return conteudoRepository.findByCategoria(categoria);
     }
 
     // GET /api/conteudos/{id}/preco-promocional - Preço com promoção
